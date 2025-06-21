@@ -1,0 +1,301 @@
+Microsoft Windows [Version 10.0.26100.4351]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\alexa>cd C:\Users\alexa\XrpWallet
+
+C:\Users\alexa\XrpWallet>flyctl launch
+Scanning source code
+Detected a Dockerfile app
+Warning: This organization has no payment method, turning off high availability
+Creating app in C:\Users\alexa\XrpWallet
+We're about to launch your app on Fly.io. Here's what you're getting:
+
+Organization: alexanderncampbell@gmail.com (fly launch defaults to the personal org)
+Name:         xrpwallet                    (derived from your directory name)
+Region:       San Jose, California (US)    (this is the fastest region for you)
+App Machines: shared-cpu-1x, 1GB RAM       (most apps need about 1GB of RAM)
+Postgres:     <none>                       (not requested)
+Redis:        <none>                       (not requested)
+Tigris:       <none>                       (not requested)
+
+? Do you want to tweak these settings before proceeding? No
+Warning: This organization has no payment method, turning off high availability
+Error: We need your payment information to continue! Add a credit card or buy credit: https://fly.io/dashboard/alexanderncampbell-gmail-com/billing
+
+C:\Users\alexa\XrpWallet>flyctl launch
+Scanning source code
+Detected a Dockerfile app
+Warning: This organization has no payment method, turning off high availability
+Creating app in C:\Users\alexa\XrpWallet
+We're about to launch your app on Fly.io. Here's what you're getting:
+
+Organization: alexanderncampbell@gmail.com (fly launch defaults to the personal org)
+Name:         xrpwallet                    (derived from your directory name)
+Region:       San Jose, California (US)    (this is the fastest region for you)
+App Machines: shared-cpu-1x, 1GB RAM       (most apps need about 1GB of RAM)
+Postgres:     <none>                       (not requested)
+Redis:        <none>                       (not requested)
+Tigris:       <none>                       (not requested)
+? Do you want to tweak these settings before proceeding? Yes
+Opening https://fly.io/cli/launch/6a636d6c703769786a626d666b736a6873617462766c6c6874686e6c6f6e6d67 ...
+
+Waiting for launch data... Done
+Warning: This organization has no payment method, turning off high availability
+Error: We need your payment information to continue! Add a credit card or buy credit: https://fly.io/dashboard/alexanderncampbell-gmail-com/billing
+
+C:\Users\alexa\XrpWallet>
+
+C:\Users\alexa\XrpWallet>flyctl init --no-deploy
+Error: unknown command "init" for "flyctl.exe"
+Run 'flyctl.exe --help' for usage.
+
+
+C:\Users\alexa\XrpWallet>flyctl deploy
+Error: the config for your app is missing an app name, add an app field to the fly.toml file or specify with the -a flag
+
+C:\Users\alexa\XrpWallet>flyctl deploy -a xrpwallet
+==> Verifying app config
+Error: error listing active machines for xrpwallet app: failed to list VMs: app not found (Request ID: 01JY90K7GGCJ8N30ECEDS02N71-sjc) (Trace ID: 6bc2310574269115f7b02102f7da1c31)
+
+C:\Users\alexa\XrpWallet>flyctl apps create xrpwallet
+automatically selected personal organization: alexanderncampbell@gmail.com
+Error: We need your payment information to continue! Add a credit card or buy credit: https://fly.io/dashboard/alexanderncampbell-gmail-com/billing
+
+C:\Users\alexa\XrpWallet>flyctl apps create my-xrpwallet-1234
+automatically selected personal organization: alexanderncampbell@gmail.com
+Error: We need your payment information to continue! Add a credit card or buy credit: https://fly.io/dashboard/alexanderncampbell-gmail-com/billing
+
+C:\Users\alexa\XrpWallet>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Dockerfile
+        dir
+        fly.toml.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\alexa\XrpWallet>git add .
+
+C:\Users\alexa\XrpWallet>git commit -m "Initial commit with Dockerfile and config"
+[main (root-commit) 3cc1594] Initial commit with Dockerfile and config
+ 3 files changed, 28 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 dir
+ create mode 100644 fly.toml.txt
+
+C:\Users\alexa\XrpWallet>git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 654 bytes | 218.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/DemonBreath/XrpWallet.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\alexa\XrpWallet>git add .
+warning: in the working copy of '.replit', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'validate.js', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\alexa\XrpWallet>git commit -m "Add full app source code"
+[main 2e1e8a4] Add full app source code
+ 5 files changed, 155 insertions(+)
+ create mode 100644 .replit
+ create mode 100644 README.md
+ create mode 100644 index.js
+ create mode 100644 package.json
+ create mode 100644 validate.js
+
+C:\Users\alexa\XrpWallet>git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 2.59 KiB | 1.29 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/DemonBreath/XrpWallet.git
+   3cc1594..2e1e8a4  main -> main
+
+C:\Users\alexa\XrpWallet>cd C:\Users\alexa\penny4us-xrp
+
+C:\Users\alexa\penny4us-xrp>npm install
+'npm' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\alexa\penny4us-xrp>git add .
+warning: in the working copy of 'penny4us-xrp/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/donation-panel.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/matrix-rain.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/sponsor-section.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/stats-display.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/transaction-history.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/typewriter-text.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/accordion.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/alert-dialog.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/alert.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/aspect-ratio.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/avatar.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/badge.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/breadcrumb.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/button.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/calendar.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/card.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/carousel.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/chart.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/checkbox.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/collapsible.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/command.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/context-menu.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/dialog.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/drawer.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/dropdown-menu.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/form.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/hover-card.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/input-otp.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/input.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/label.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/menubar.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/navigation-menu.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/pagination.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/popover.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/progress.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/radio-group.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/resizable.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/scroll-area.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/select.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/separator.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/sheet.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/sidebar.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/skeleton.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/slider.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/switch.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/table.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/tabs.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/textarea.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/toast.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/toaster.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/toggle-group.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/toggle.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/ui/tooltip.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/components/withdrawal-panel.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/hooks/use-mobile.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/hooks/use-stats.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/hooks/use-toast.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/hooks/use-transactions.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/lib/queryClient.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/lib/utils.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/main.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/pages/home.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/client/src/pages/not-found.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/components.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/postcss.config.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/server/index.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/server/routes.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/server/storage.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/server/vite.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/shared/schema.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/tailwind.config.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'penny4us-xrp/vite.config.ts', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\alexa\penny4us-xrp>git commit -m "Deploy Penny4Us platform"
+[master (root-commit) e69ba2f] Deploy Penny4Us platform
+ 79 files changed, 16113 insertions(+)
+ create mode 100644 penny4us-xrp/README.md
+ create mode 100644 penny4us-xrp/client/index.html
+ create mode 100644 penny4us-xrp/client/src/App.tsx
+ create mode 100644 penny4us-xrp/client/src/components/donation-panel.tsx
+ create mode 100644 penny4us-xrp/client/src/components/matrix-rain.tsx
+ create mode 100644 penny4us-xrp/client/src/components/sponsor-section.tsx
+ create mode 100644 penny4us-xrp/client/src/components/stats-display.tsx
+ create mode 100644 penny4us-xrp/client/src/components/transaction-history.tsx
+ create mode 100644 penny4us-xrp/client/src/components/typewriter-text.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/accordion.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/alert-dialog.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/alert.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/aspect-ratio.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/avatar.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/badge.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/breadcrumb.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/button.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/calendar.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/card.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/carousel.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/chart.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/checkbox.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/collapsible.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/command.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/context-menu.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/dialog.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/drawer.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/dropdown-menu.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/form.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/hover-card.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/input-otp.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/input.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/label.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/menubar.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/navigation-menu.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/pagination.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/popover.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/progress.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/radio-group.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/resizable.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/scroll-area.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/select.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/separator.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/sheet.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/sidebar.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/skeleton.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/slider.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/switch.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/table.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/tabs.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/textarea.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/toast.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/toaster.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/toggle-group.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/toggle.tsx
+ create mode 100644 penny4us-xrp/client/src/components/ui/tooltip.tsx
+ create mode 100644 penny4us-xrp/client/src/components/withdrawal-panel.tsx
+ create mode 100644 penny4us-xrp/client/src/hooks/use-mobile.tsx
+ create mode 100644 penny4us-xrp/client/src/hooks/use-stats.ts
+ create mode 100644 penny4us-xrp/client/src/hooks/use-toast.ts
+ create mode 100644 penny4us-xrp/client/src/hooks/use-transactions.ts
+ create mode 100644 penny4us-xrp/client/src/index.css
+ create mode 100644 penny4us-xrp/client/src/lib/queryClient.ts
+ create mode 100644 penny4us-xrp/client/src/lib/utils.ts
+ create mode 100644 penny4us-xrp/client/src/main.tsx
+ create mode 100644 penny4us-xrp/client/src/pages/home.tsx
+ create mode 100644 penny4us-xrp/client/src/pages/not-found.tsx
+ create mode 100644 penny4us-xrp/components.json
+ create mode 100644 penny4us-xrp/package-lock.json
+ create mode 100644 penny4us-xrp/package.json
+ create mode 100644 penny4us-xrp/postcss.config.js
+ create mode 100644 penny4us-xrp/server/index.ts
+ create mode 100644 penny4us-xrp/server/routes.ts
+ create mode 100644 penny4us-xrp/server/storage.ts
+ create mode 100644 penny4us-xrp/server/vite.ts
+ create mode 100644 penny4us-xrp/shared/schema.ts
+ create mode 100644 penny4us-xrp/tailwind.config.ts
+ create mode 100644 penny4us-xrp/tsconfig.json
+ create mode 100644 penny4us-xrp/vite.config.ts
+
+C:\Users\alexa\penny4us-xrp>git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+C:\Users\alexa\penny4us-xrp>
