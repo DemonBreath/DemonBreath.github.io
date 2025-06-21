@@ -5,6 +5,15 @@ import type { Sponsor } from "@shared/schema";
 export function SponsorSection() {
   const { data: sponsors, isLoading } = useQuery<Sponsor[]>({
     queryKey: ["/api/sponsors"],
+    queryFn: async () => {
+      const { getApiUrl } = await import('../lib/api-adapter');
+      const url = getApiUrl('/sponsors');
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("Failed to fetch sponsors");
+      }
+      return response.json();
+    },
   });
 
   if (isLoading) {

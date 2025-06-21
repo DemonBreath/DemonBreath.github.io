@@ -5,7 +5,9 @@ export function useTransactions(limit: number = 10) {
   return useQuery<Transaction[]>({
     queryKey: ["/api/transactions", limit],
     queryFn: async () => {
-      const response = await fetch(`/api/transactions?limit=${limit}`, {
+      const { getApiUrl } = await import('../lib/api-adapter');
+      const url = getApiUrl('/transactions');
+      const response = await fetch(url, {
         credentials: "include",
       });
       if (!response.ok) {
