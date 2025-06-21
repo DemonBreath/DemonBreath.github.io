@@ -61,7 +61,7 @@ export class MemStorage implements IStorage {
 
     defaultSponsors.forEach(sponsor => {
       const id = this.currentSponsorId++;
-      this.sponsors.set(id, { ...sponsor, id });
+      this.sponsors.set(id, { ...sponsor, id, isActive: sponsor.isActive ?? true });
     });
 
     // Add some mock transactions
@@ -99,6 +99,8 @@ export class MemStorage implements IStorage {
       this.transactions.set(id, { 
         ...tx, 
         id, 
+        message: tx.message ?? null,
+        status: tx.status ?? "pending",
         createdAt: new Date(Date.now() - Math.random() * 1000 * 60 * 60) // Random time within last hour
       });
     });
@@ -116,6 +118,8 @@ export class MemStorage implements IStorage {
     const transaction: Transaction = {
       ...insertTransaction,
       id,
+      message: insertTransaction.message ?? null,
+      status: insertTransaction.status ?? "pending",
       createdAt: new Date(),
     };
     this.transactions.set(id, transaction);
@@ -149,7 +153,11 @@ export class MemStorage implements IStorage {
 
   async createSponsor(insertSponsor: InsertSponsor): Promise<Sponsor> {
     const id = this.currentSponsorId++;
-    const sponsor: Sponsor = { ...insertSponsor, id };
+    const sponsor: Sponsor = { 
+      ...insertSponsor, 
+      id,
+      isActive: insertSponsor.isActive ?? true 
+    };
     this.sponsors.set(id, sponsor);
     return sponsor;
   }
