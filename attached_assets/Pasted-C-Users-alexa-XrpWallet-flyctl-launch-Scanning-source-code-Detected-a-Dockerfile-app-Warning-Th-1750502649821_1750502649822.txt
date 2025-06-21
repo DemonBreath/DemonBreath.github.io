@@ -1,0 +1,120 @@
+C:\Users\alexa\XrpWallet>flyctl launch
+Scanning source code
+Detected a Dockerfile app
+Warning: This organization has no payment method, turning off high availability
+Creating app in C:\Users\alexa\XrpWallet
+We're about to launch your app on Fly.io. Here's what you're getting:
+
+Organization: alexanderncampbell@gmail.com (fly launch defaults to the personal org)
+Name:         xrpwallet                    (derived from your directory name)
+Region:       San Jose, California (US)    (this is the fastest region for you)
+App Machines: shared-cpu-1x, 1GB RAM       (most apps need about 1GB of RAM)
+Postgres:     <none>                       (not requested)
+Redis:        <none>                       (not requested)
+Tigris:       <none>                       (not requested)
+
+? Do you want to tweak these settings before proceeding? No
+Warning: This organization has no payment method, turning off high availability
+Error: We need your payment information to continue! Add a credit card or buy credit: https://fly.io/dashboard/alexanderncampbell-gmail-com/billing
+
+C:\Users\alexa\XrpWallet>flyctl launch
+Scanning source code
+Detected a Dockerfile app
+Warning: This organization has no payment method, turning off high availability
+Creating app in C:\Users\alexa\XrpWallet
+We're about to launch your app on Fly.io. Here's what you're getting:
+
+Organization: alexanderncampbell@gmail.com (fly launch defaults to the personal org)
+Name:         xrpwallet                    (derived from your directory name)
+Region:       San Jose, California (US)    (this is the fastest region for you)
+App Machines: shared-cpu-1x, 1GB RAM       (most apps need about 1GB of RAM)
+Postgres:     <none>                       (not requested)
+Redis:        <none>                       (not requested)
+Tigris:       <none>                       (not requested)
+? Do you want to tweak these settings before proceeding? Yes
+Opening https://fly.io/cli/launch/6a636d6c703769786a626d666b736a6873617462766c6c6874686e6c6f6e6d67 ...
+
+Waiting for launch data... Done
+Warning: This organization has no payment method, turning off high availability
+Error: We need your payment information to continue! Add a credit card or buy credit: https://fly.io/dashboard/alexanderncampbell-gmail-com/billing
+
+C:\Users\alexa\XrpWallet>
+
+C:\Users\alexa\XrpWallet>flyctl init --no-deploy
+Error: unknown command "init" for "flyctl.exe"
+Run 'flyctl.exe --help' for usage.
+
+
+C:\Users\alexa\XrpWallet>flyctl deploy
+Error: the config for your app is missing an app name, add an app field to the fly.toml file or specify with the -a flag
+
+C:\Users\alexa\XrpWallet>flyctl deploy -a xrpwallet
+==> Verifying app config
+Error: error listing active machines for xrpwallet app: failed to list VMs: app not found (Request ID: 01JY90K7GGCJ8N30ECEDS02N71-sjc) (Trace ID: 6bc2310574269115f7b02102f7da1c31)
+
+C:\Users\alexa\XrpWallet>flyctl apps create xrpwallet
+automatically selected personal organization: alexanderncampbell@gmail.com
+Error: We need your payment information to continue! Add a credit card or buy credit: https://fly.io/dashboard/alexanderncampbell-gmail-com/billing
+
+C:\Users\alexa\XrpWallet>flyctl apps create my-xrpwallet-1234
+automatically selected personal organization: alexanderncampbell@gmail.com
+Error: We need your payment information to continue! Add a credit card or buy credit: https://fly.io/dashboard/alexanderncampbell-gmail-com/billing
+
+C:\Users\alexa\XrpWallet>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Dockerfile
+        dir
+        fly.toml.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\alexa\XrpWallet>git add .
+
+C:\Users\alexa\XrpWallet>git commit -m "Initial commit with Dockerfile and config"
+[main (root-commit) 3cc1594] Initial commit with Dockerfile and config
+ 3 files changed, 28 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 dir
+ create mode 100644 fly.toml.txt
+
+C:\Users\alexa\XrpWallet>git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 654 bytes | 218.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/DemonBreath/XrpWallet.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\alexa\XrpWallet>git add .
+warning: in the working copy of '.replit', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'validate.js', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\alexa\XrpWallet>git commit -m "Add full app source code"
+[main 2e1e8a4] Add full app source code
+ 5 files changed, 155 insertions(+)
+ create mode 100644 .replit
+ create mode 100644 README.md
+ create mode 100644 index.js
+ create mode 100644 package.json
+ create mode 100644 validate.js
+
+C:\Users\alexa\XrpWallet>git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 2.59 KiB | 1.29 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/DemonBreath/XrpWallet.git
+   3cc1594..2e1e8a4  main -> main
