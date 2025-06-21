@@ -18,10 +18,10 @@
    - Scroll to **Pages** section
    - Under **Source**, select **GitHub Actions**
 
-3. **Update Repository Name**
-   - Edit `vite.config.github.ts`
-   - Change `base: '/penny4us/'` to match your repository name
-   - If your repo is named differently, update accordingly
+3. **Configure for Root Path**
+   - The config is already set to serve from root (`base: '/'`)
+   - This makes GitHub Pages look identical to the Replit preview
+   - Update the URLs in `client/index.html` to match your domain
 
 ## Automatic Deployment
 

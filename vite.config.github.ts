@@ -4,7 +4,7 @@ import path from "path"
 
 export default defineConfig({
   plugins: [react()],
-  base: '/penny4us/', // Replace with your repository name
+  base: '/', // Serve from root path for identical experience
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client/src"),

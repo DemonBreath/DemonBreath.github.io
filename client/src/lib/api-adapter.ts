@@ -5,9 +5,8 @@ const isGitHubPages = window.location.hostname.includes('github.io') || window.l
 
 export function getApiUrl(endpoint: string): string {
   if (isGitHubPages) {
-    // For GitHub Pages, use static JSON files
-    const basePath = window.location.pathname.replace(/\/$/, '');
-    return `${basePath}/api${endpoint}/index.json`;
+    // For GitHub Pages, use static JSON files from root
+    return `/api${endpoint}/index.json`;
   }
   
   // For development and other deployments, use live API
