@@ -133,7 +133,7 @@ export default function Home() {
               
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                  src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
                   alt="Dark circuit board with neon lights" 
                   className="rounded-lg w-full h-48 object-cover mb-4" 
                 />
