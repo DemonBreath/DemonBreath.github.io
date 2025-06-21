@@ -73,10 +73,10 @@ const mockTransactions = [
 ];
 
 // Create mock API endpoints as JSON files
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
-const apiDir = './dist/public/api';
+const apiDir = './dist/api';
 
 // Create API directory structure
 fs.mkdirSync(path.join(apiDir, 'transactions'), { recursive: true });

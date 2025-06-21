@@ -31,12 +31,13 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: |
+        npm --version
+        node --version
+        npm ci
       
     - name: Build application
-      run: |
-        npm run build
-        node static-server.js
+      run: node build-github.js
       env:
         NODE_ENV: production
         
@@ -46,7 +47,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./dist/public
+        path: ./dist
 
   deploy:
     environment:
