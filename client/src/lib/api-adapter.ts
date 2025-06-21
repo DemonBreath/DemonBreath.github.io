@@ -1,7 +1,7 @@
 // API adapter for GitHub Pages deployment
 // Switches between live API and static JSON files based on environment
 
-const isGitHubPages = window.location.hostname.includes('github.io');
+const isGitHubPages = window.location.hostname.includes('github.io') || window.location.hostname.includes('github.dev');
 
 export function getApiUrl(endpoint: string): string {
   if (isGitHubPages) {
